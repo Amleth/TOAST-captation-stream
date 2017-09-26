@@ -1,0 +1,9 @@
+debug=true
+consumerKey=
+consumerSecret=
+accessTokenKey=
+accessTokenSecret=
+track=eurorack;osr;china
+mongo-port=27017
+mongo-db=my_db
+mongo-collection=tweets

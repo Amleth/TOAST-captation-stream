@@ -36,7 +36,7 @@ public class Main {
                     String rawJSON = TwitterObjectFactory.getRawJSON(status);
                     Document doc = new Document().append("rawJson", Document.parse(rawJSON));
                     tweets_collection.insertOne(doc);
-                    System.out.println(rawJSON);
+                    System.out.println(((Document)doc.get("rawJson")).get("text"));
                 }
 
                 public void onDeletionNotice(StatusDeletionNotice statusDeletionNotice) {

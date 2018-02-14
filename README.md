@@ -3,14 +3,14 @@
 Ce programme fait partie de la suite d'outils [TOAST](https://github.com/Amleth/TOAST-outils-pour-l-analyse-semiotique-de-Twitter).
 Il s'agit d'un programme Java faisant une utilisation simple de [Twitter4J](http://twitter4j.org/en/index.html). Les tweets capturés via l'[API Streaming](https://dev.twitter.com/streaming/public) sont stockés dans une base [MongoDB](https://www.mongodb.com/). Ce choix est motivé par le fait que le format JSON est natif à ce SGBD, ce qui rend possible de stocker les tweets tels qu'ils donnés par l'API stream de Twitter sans transormation aucune.
 
-## Mise en oeuvre
+## Mise en œuvre
 
   1. Installer un JDK.
   2. Installer Maven et avoir l'executable `mvn` dans le path.
   3. Installer MongoDB, par exemple via Docker :
 
-  > docker run --name some-mongo -d mongo
-  > docker run -p 27017:27017 mongo
+    docker run --name some-mongo -d mongo
+    docker run -p 27017:27017 mongo
 
   4. Déclarer une application auprès de Twitter : [ici](https://apps.twitter.com/).
 
@@ -25,8 +25,8 @@ Dans le fichier de configuration `config`:
 ## Lancement
 
   1. `mvn compile`
-  2. `mvn exec:java`
+  2. `mvn exec:java -Dexec.mainClass="com.artisiou.toast.Main"`
 
 ## Données
 
-Chaque tweet capté donne lieu à un nouveau document MongoDB. Les différents champs renvoyés par l'API stream pour un tweet sont stockés sous une clef nommée `rawJson`, présente dans chaque document. Ce détail est à garder à l'esprit lors de l'exploitation de la base.
+Chaque tweet capté donne lieu à un nouveau document MongoDB. Les différents champs renvoyés par la Streaming API pour un *tweet* sont stockés sous une clef nommée `rawJson`, présente dans chaque document. Ce détail est à garder à l'esprit lors de l'exploitation de la base.

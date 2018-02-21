@@ -25,7 +25,7 @@ Dans le fichier de configuration `config`:
 ## Lancement
 
   1. `mvn compile`
-  2. `mvn exec:java -Dexec.mainClass="com.artisiou.toast.Main"`
+  2. `mvn exec:java -Dexec.mainClass="Main"`
 
 ## Données
 

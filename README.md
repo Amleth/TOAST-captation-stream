@@ -20,7 +20,9 @@ Dans le fichier de configuration `config`:
 
   1. Renseigner les *Consumer Key*, *Consumer Secret*, *Access Token* et *Access Token Secret* obtenus lors de la déclaration de l'application auprès de Twitter.
   3. Renseigner le port local sur lequel tourne MongoDB (`mongo-port`), ainsi que le nom de la base (`mongo-db`)et le nom de la collection recueillant les tweets souhaités (`mongo-collection`).
-  4. Saisir la liste des mots suivis (`track`).
+  4. Saisir la liste des mots suivis (`track`), séparés par des ```;```. Exemple :
+
+	chine;osr;spinoza
 
 ## Lancement
 

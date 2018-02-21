@@ -16,7 +16,7 @@ Il s'agit d'un programme Java faisant une utilisation simple de [Twitter4J](http
 
 ## Paramétrage
 
-Dans le fichier de configuration `config`:
+Dans le fichier de configuration `config` (renommer le `config.dist`, qui sert de modèle, en `config`) :
 
   1. Renseigner les *Consumer Key*, *Consumer Secret*, *Access Token* et *Access Token Secret* obtenus lors de la déclaration de l'application auprès de Twitter.
   3. Renseigner le port local sur lequel tourne MongoDB (`mongo-port`), ainsi que le nom de la base (`mongo-db`)et le nom de la collection recueillant les tweets souhaités (`mongo-collection`).
